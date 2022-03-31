@@ -2,6 +2,7 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
+        new Menu();
         //ejemplos para validar si funciona
         //matriz ady
         //La matriz de adyacencia de los grafos no dirigidos siempre es simétrica.

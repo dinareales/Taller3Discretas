@@ -13,18 +13,22 @@ public class Grafo {
     public String tipoDeGrafo(int[][] matrix) {
         String retorno = "El grafo es: ";
 
-        if (esRegular(matrix)) {
-            retorno += "\nRegular";
-        }
-
-        if (esCompleto(matrix)) {
-            retorno += "\nCompleto ";
-        }
-
         if (esDirigido(matrix)) {
             retorno += "\nDirigido ";
         } else {
             retorno += "\nNo dirigido ";
+        }
+
+        if (esRegular(matrix)) {
+            retorno += "\nRegular";
+        } else {
+        retorno += "\nNo es regular ";
+        }
+
+        if (esCompleto(matrix)) {
+            retorno += "\nCompleto ";
+        } else {
+            retorno += "\nNo es completo ";
         }
 
         return retorno;
