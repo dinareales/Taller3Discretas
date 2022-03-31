@@ -4,8 +4,10 @@ import java.util.Scanner;
 public class Menu {
     boolean exit = false;
     int option;
-    int vertice = 0;
+    int vertice;
+    int arista;
     int[][] matrix;
+    int[][] matrixInc;
     int n;
 
     public Menu() {
@@ -44,6 +46,16 @@ public class Menu {
                     case 2:
                         System.out.print("Ingrese el numero de vertices del grafo: ");
                         vertice = Integer.parseInt(sc.next());
+                        System.out.print("Ingrese el numero de aristas del grafo: ");
+                        arista = Integer.parseInt(sc.next());
+
+                        MatrixInci matrixInc = new MatrixInci(vertice,arista);
+                        System.out.print("Matriz incidente actual:\n");
+                        matrixInc.imprimir();
+
+                        matrixInc.llenarMatrixAdy(vertice,arista);
+                        System.out.print("Matriz incidente actual:\n");
+                        matrixInc.imprimir();
                         break;
                     case 3:
                         System.out.print("Hasta luego!");
