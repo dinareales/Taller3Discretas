@@ -56,6 +56,10 @@ public class Menu {
                         matrixInc.llenarMatrixAdy(vertice,arista);
                         System.out.print("Matriz incidente actual:\n");
                         matrixInc.imprimir();
+
+                        Grafo grafo2 = new Grafo();
+                        String typeGraph2 = grafo2.tipoDeGrafo(matrixInc.getMatrix());
+                        System.out.println(typeGraph2);
                         break;
                     case 3:
                         System.out.print("Hasta luego!");
